@@ -16,3 +16,10 @@ var tts = timeInSecond.reduce((pv, c,i) =>{
 },0)
 var hours = tts / 60 /60;
 console.log(hours,'小时')
+
+// 视频标题
+var titles = ''
+jQuery('.part').each((i,e)=>{titles += e.innerText + '\n'})
+var e = document.createElement('div')
+e.innerText = titles;
+document.body.insertBefore(e,document.getElementById('app'))
